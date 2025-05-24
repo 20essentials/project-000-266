@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xicron</title>
+    <meta name="google" content="notranslate" />
+    <link rel="shortcut icon" href="assets/favicon.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      {% set bases = ["base-bottom", "center", "center-top", "base-top"] %}
+      {% for base in bases %}
+        <div class="base {{ base }}">
+          {% for i in range(1, 6) %}
+            <div class="side side-{{ i }}"></div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
